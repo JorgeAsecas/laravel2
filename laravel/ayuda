@@ -1,3 +1,6 @@
+sudo -i -u postgres
+psql -U postgres
+
 ALTER USER -user- WITH SUPERUSER;
 ALTER USER -user- WITH CREATEDB;
 GRANT CONNECT ON DATABASE -basededatos- TO -user-;

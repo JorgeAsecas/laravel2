@@ -1,0 +1,16 @@
+ALTER USER -user- WITH SUPERUSER;
+ALTER USER -user- WITH CREATEDB;
+GRANT CONNECT ON DATABASE -basededatos- TO -user-;
+CREATE DATABASE -basededatos-;
+CREATE USER -user- WITH PASSWORD -'password'-;
+GRANT ALL PRIVILEGES ON DATABASE -basededatos- TO -user-;
+composer create-project --prefer-dist laravel/laravel -nombreprojecto-
+php artisan key:generate
+composer require laravel/breeze --dev
+php artisan breeze:install
+php artisan serve
+npm install
+npm run dev
+php artisan migrate
+php artisan make:controller -NombreControlador-
+php artisan make:migration create_-nombres-_table --create=-nombres-
